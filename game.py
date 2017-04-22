@@ -7,6 +7,8 @@ import asciart
 from enemies import *
 import world
 
+#  ex #
+
 from character import *
 
 character.inv.update({'Nothing' : ' ', 'Dmg' : 0, 'ARM' : 0})

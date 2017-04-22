@@ -53,4 +53,4 @@ thief = Hum('Rat', 10, 4, 'Tea')
 class Drag(enemy):
     pass
 
-boss = Drag('Gulo', 30, 6, 'Win')
+boss = Drag('Gulo', 25, 6, 'Win')

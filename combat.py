@@ -3,6 +3,7 @@ import world
 from enemies import *
 import inventory
 import os
+import time
 
 def init(enmy):
     print(character.name, 'HP: ', character.lp)
@@ -53,7 +54,14 @@ def init(enmy):
                 character.lp = + 3
 
             character.keys.append(enmy.keys)
-
+            if boss.keys in character.keys:
+                os.system('clear')
+                print('Congrats! You won! The whole shitty city loves you!\n '
+                      'But you still have to pay your taxes to the king and work until you will die due to a cold at the old age of 35')
+                time.sleep(5)
+                quit()
+            else:
+                pass
             print('You found this object:')
             objprize = random.choice(inventory.items)
             print(objprize)

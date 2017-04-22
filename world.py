@@ -75,6 +75,7 @@ class World:
             print('[Leave (b)]')
             choice = input('>>>>')
             if choice == 'a':
+                os.system('clear')
                 World.City()
             else:
                 os.system('clear')
@@ -86,15 +87,17 @@ class World:
             print('[Have a walk (a)]       [Leave (b)]')
             choice = input('>>>>')
             if choice == 'a':
+                os.system('clear')
                 World.HarborThief()
 
             else:
+                os.system('clear')
                 World.City()
 
     def Brothel():
         character.loc.clear()
         character.loc.update({'Brothel' : 4})
-
+        os.system('clear')
         if mongl.keys not in character.keys:
             print('You enter a barely lit brothel that looks everything but the cool one in GoT.')
             print('Obviously, there are many different women from many different continents who do not wear very different clothes')
@@ -125,7 +128,7 @@ class World:
                 pass
 
     def BrothelGoblin():
-
+        os.system('clear')
         print('You approach the only half clothed lady in the brothel, her long dark hair remind you vaguely your cousin.\n'
               'She is giving you her back (no pun intended) and you gently lay your hand on her shoulder.\n'
               'As soon as she turns her long hair drop on the floor, revealing it was a wig and that she is not a woman!')
@@ -144,6 +147,7 @@ class World:
             World.Brothel()
 
     def TavernOrc():
+        os.system('clear')
         print(asciart.OrcArt)
         print('What are you looking at puny creature? Are you looking for a fight?')
         print(' ')
@@ -155,6 +159,7 @@ class World:
             print(' ')
             init(glu)
         else:
+            os.system('clear')
             World.Tavern()
 
     def HarborThief():
@@ -174,12 +179,14 @@ class World:
             print(' ')
             init(thief)
         else:
+            os.system('clear')
             World.Brothel()
 
     def Market():
         pass
 
     def Boss():
+        os.system('clear')
         print('Dear lord, here we go again... Those peasants are for the billionth time being attacked by a dragon.\n'
               'Guess vacation is out of question right now... Such a shame since they are having sales at the brothel.\n'
               'Anyway, now you are facing the dragon! He spits fire, flies, all of that shit.\n'

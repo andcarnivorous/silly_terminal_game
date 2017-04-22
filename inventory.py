@@ -1,0 +1,2 @@
+items = [{'Name' : 'Badile', 'Dmg' : 3, 'ARM' : 0}, {'Name' : 'Padella', 'Dmg' : 1, 'ARM' : 0}, {'Name' : 'Sospensorio', 'Dmg' : 0, 'ARM' : 2},
+         {'Name' : 'Tutù', 'Dmg' : 0, 'ARM' : 1}, {'Name' : 'Sword', 'Dmg' : 2, 'ARM' : 0}, {'Name' : 'Bazooka', 'Dmg' : 5, 'ARM' : 0}]

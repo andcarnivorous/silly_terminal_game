@@ -132,7 +132,7 @@ class World:
         print('You approach the only half clothed lady in the brothel, her long dark hair remind you vaguely your cousin.\n'
               'She is giving you her back (no pun intended) and you gently lay your hand on her shoulder.\n'
               'As soon as she turns her long hair drop on the floor, revealing it was a wig and that she is not a woman!')
-        time.sleep(3)
+        time.sleep(8)
         os.system('clear')
         print(asciart.GoblinArt)
         print('"Come one! Give us a kiss!"\n')
@@ -167,7 +167,7 @@ class World:
         print('You are walking along the seaside, where many men are fighting, shouting and loading cargos up on the ships.'
               '\nA nice dark alley seems the perfect place to end you relaxing walk.'
               '\nObviously, a thief comes out with a huge knife in his hand ready to gut you')
-        time.sleep(3)
+        time.sleep(7)
         os.system('clear')
         print(asciart.ThiefArt)
         print('"The bag or the life lady!"\n')
@@ -191,7 +191,7 @@ class World:
               'Guess vacation is out of question right now... Such a shame since they are having sales at the brothel.\n'
               'Anyway, now you are facing the dragon! He spits fire, flies, all of that shit.\n'
               'Fight him and save those commoners!')
-        time.sleep(5)
+        time.sleep(9)
         os.system('clear')
         print(asciart.boss)
         time.sleep(4)

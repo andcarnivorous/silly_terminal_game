@@ -5,12 +5,16 @@ from combat import *
 import merchants
 import time
 
+bosskeys = [glu.keys, mongl.keys, thief.keys]
+
 class World:
+
     def City():
-        if thief.keys and glu.keys and mongl.keys in character.keys:
+        if all((key in character.keys for key in bosskeys)):
             World.Boss()
         else:
             print(asciart.city)
+            print(character.keys)
             print('You are in a misterious but yet familiar city. There are old buildings from the middle age or something,')
             print('drunk men in the narrow streets and stressed out women who probably make 10c on the $ compared to those men.')
             print('This is what the town looks like (nice shithole, huh?):')
@@ -188,7 +192,7 @@ class World:
     def Boss():
         os.system('clear')
         print('Dear lord, here we go again... Those peasants are for the billionth time being attacked by a dragon.\n'
-              'Guess vacation is out of question right now... Such a shame since they are having sales at the brothel.\n'
+              'Guess a vacation is out of question right now... Such a shame since they are having sales at the brothel.\n'
               'Anyway, now you are facing the dragon! He spits fire, flies, all of that shit.\n'
               'Fight him and save those commoners!')
         time.sleep(9)

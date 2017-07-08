@@ -1,7 +1,7 @@
 class Character:
 
     def __init__(self, name, lp, attk, inv, arm, mana, money, keys, loc):
-        self.place = name
+#        self.place = name
         self.name = name
         self.lp = lp
         self.inv = inv

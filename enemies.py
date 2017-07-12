@@ -14,18 +14,18 @@ class enemy:
     def Combat(self):
         print(random.choice([asciart.FightArt, asciart.FightArt2]))
         print(random.choice(asciart.randsent))
-        character.lp -= (self.attk - character.arm + randint(1, 4))
+        character.lp -= (self.attk - character.arm - charinv.itemarm + randint(2, 6))
         print('You have', character.lp, 'HP left')
-        self.lp -= character.attk + character.inv['Dmg'] + randint(1, 4)
+        self.lp -= character.attk + charinv.itemdmg + randint(1, 4)
         print(self.name, 'has', self.lp, 'HP left')
 
     def MagicCombat(self):
         print(random.choice([asciart.FightArt, asciart.FightArt2]))
         print(random.choice(asciart.randsent))
-        character.lp -= (self.attk - character.arm + randint(1, 4))
+        character.lp -= (self.attk - character.arm - charinv.itemarm + randint(1, 4))
         print('You have', character.lp, 'HP left')
-        self.lp -= character.attk + character.inv['Dmg'] + randint(1,
-                                                                   4) + character.mana + character.attk + character.arm
+        self.lp -= character.attk + charinv.itemdmg + randint(1,
+                                                                   4) + character.mana + character.attk + charinv.itemmana
         print(self.name, 'has', self.lp, 'HP left')
 
 

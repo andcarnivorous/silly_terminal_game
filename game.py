@@ -6,31 +6,25 @@ import inventory
 import asciart
 from enemies import *
 import world
-
-#  ex #
-
 from character import *
-
-character.inv.update({'Nothing' : ' ', 'Dmg' : 0, 'ARM' : 0})
 
 
 os.system('clear')
 
-
 def race():
     if chrace == 'h':
+        character.lp += 3
+        character.attk += 3
+        character.arm += 4
+    elif chrace == 'e':
         character.lp += 2
         character.attk += 2
-        character.arm += 3
-    elif chrace == 'e':
-        character.lp += 1
-        character.attk += 1
-        character.arm += 1
+        character.arm += 2
         character.mana += 2
     elif chrace == 'd':
-        character.lp += 3
-        character.attk += 1
-        character.arm += 4
+        character.lp += 4
+        character.attk += 2
+        character.arm += 5
     print('So, you are one of those supercool-neckcracking-ass-kicking guys')
     print('Kewl!')
     time.sleep(3)

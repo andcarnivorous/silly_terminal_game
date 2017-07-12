@@ -21,7 +21,7 @@ def init(enmy):
         else:
             print('[Attack (a)]     [OUT OF MANA!]     [Piss yourself & run (p)]')
 
-        print('Your Basic Damage is ', character.attk + character.inv['Dmg'])
+        print('Your Basic Damage is ', character.attk + charinv.itemdmg)
         startcombat = input('>>>>')
 
         if startcombat == 'a':
@@ -62,16 +62,41 @@ def init(enmy):
                 quit()
             else:
                 pass
+
+  
             print('You found this object:')
             objprize = random.choice(inventory.items)
-            print(objprize)
+            print(objprize.name,"\n",objprize.info)
             answ = input('do you want it?')
             if answ == 'y':
-                character.inv.clear()
-                character.inv.update(objprize)
+    
+                if isinstance(objprize, inventory.Weapon) == True:
+                    charinv.itemdmg = 0
+                    charinv.itemdmg += objprize.dmg
+                    charinv.wpnname.clear()
+                    charinv.wpnname.append(objprize.name)
+                    pass
 
-                print(character.inv)
-                print(character.attk, character.lp)
+                elif isinstance(objprize, inventory.Armor) == True:
+                    charinv.itemarm = 0
+                    charinv.itemarm += objprize.arm
+                    charinv.armname.clear()
+                    charinv.armname.append(objprize.name)
+                    pass
+
+                elif isinstance(objprize, inventory.Jewel) == True:
+                    charinv.itemmana = 0
+                    charinv.itemmana += objprize.mana
+                    charinv.jwlname.clear()
+                    charinv.jwlname.append(objprize.name)
+                    pass
+
+                else:
+                    pass
+
+
+                
+
                 os.system('clear')
                 if character.loc == {'Tavern': 1}:
                     world.World.Tavern()
@@ -106,4 +131,6 @@ def init(enmy):
         else:
 
             pass
+
+
 

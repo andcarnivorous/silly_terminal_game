@@ -7,6 +7,24 @@ import time
 
 bosskeys = [glu.keys, mongl.keys, thief.keys]
 
+def stats():
+
+    print('_________________________')
+    print('Basic Attack : ', character.attk)
+    print('Basic Armor  : ', character.arm)
+    print('Basic Mana   : ', character.mana)
+    print('Weapon       : ', charinv.wpnname, ":", charinv.itemdmg)
+    print('Amor         : ', charinv.armname, ":", charinv.itemarm)
+    print('Jewel        : ', charinv.jwlname, ":", charinv.itemmana)    
+    print('Money        : ', character.money)
+    print('_________________________')
+    destination = input('>>>')
+    if destination == 'a':
+        os.system('clear')
+        World.City()
+    else:
+        World.City()
+ 
 class World:
 
     def City():
@@ -20,6 +38,7 @@ class World:
             print('This is what the town looks like (nice shithole, huh?):')
             print('Where do you go?')
             print('[Tavern (a)]       [Harbor (b)]      [Market (c)]      [Brothel (d)]')
+            print('[Inventory (i)]')
             destination = input('>>>')
             if destination == 'a':
                 os.system('clear')
@@ -33,9 +52,13 @@ class World:
             elif destination == 'd':
                 os.system('clear')
                 World.Brothel()
+            elif destination == 'i':
+                os.system('clear')
+                stats()
             else:
                 City()
 
+    
     def Tavern():
         character.loc.clear()
         character.loc.update({'Tavern' : 1})
@@ -184,9 +207,10 @@ class World:
             init(thief)
         else:
             os.system('clear')
-            World.Brothel()
+            World.Harbor()
 
     def Market():
+        merchants.MarketMerchant()
         pass
 
     def Boss():

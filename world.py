@@ -37,7 +37,7 @@ class World:
             print('drunk men in the narrow streets and stressed out women who probably make 10c on the $ compared to those men.')
             print('This is what the town looks like (nice shithole, huh?):')
             print('Where do you go?')
-            print('[Tavern (a)]       [Harbor (b)]      [Market (c)]      [Brothel (d)]')
+            print('[Tavern (a)]       [Harbor (b)]      [Brothel (d)]')
             print('[Inventory (i)]')
             destination = input('>>>')
             if destination == 'a':

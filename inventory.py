@@ -11,11 +11,11 @@ class Item:
 class Weapon(Item):
     pass
 
-badile = Weapon("Badile", "", 3,0,0)
+badile = Weapon("Shovel", "", 3,0,0)
 
-padella = Weapon("Padella", "", 1,0,0)
+padella = Weapon("Pan", "", 1,0,0)
 
-spada = Weapon("Spada", "", 2,0,0)
+spada = Weapon("Sword", "", 2,0,0)
 
 bazooka = Weapon("Bazooka", "", 5,0,0)
 
@@ -24,7 +24,7 @@ class Armor(Item):
 
 tutu = Armor("Tutù", "",0,1,0)
 
-sospensorio = Armor("Sospensorio", "", 0,2,0)
+sospensorio = Armor("Jockstrap", "", 0,2,0)
 
 space_suit = Armor("Space Suit", "", 0,5,0)
 

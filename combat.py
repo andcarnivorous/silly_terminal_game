@@ -66,8 +66,9 @@ def init(enmy):
   
             print('You found this object:')
             objprize = random.choice(inventory.items)
-            print(objprize.name,"\n",objprize.info)
-            answ = input('do you want it? [y/n]')
+            print("\t ***", objprize.name,"*** \n",objprize.info, "\n",
+                  "DMG:", objprize.dmg, "ARM:", objprize.arm, "MANA:", objprize.mana)
+            answ = input('do you want it? [y/n] \n>>>>')
             if answ == 'y':
     
                 if isinstance(objprize, inventory.Weapon) == True:

@@ -8,3 +8,12 @@ And you get gold! Be sure to report that gold to the IRS though, that gold is li
 
 Anyways, at the end you have to fight a dragon [spoiler alert! (are you supposed to write it before or after? Well, who cares, it's done)]
 
+
+# How to install
+
+Just git clone the repo and then type
+
+    python3 game.py
+
+in the terminal and you're good to go
+
